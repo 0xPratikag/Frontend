@@ -34,7 +34,7 @@ import DiscountRules from "./DiscountRules/DiscountRules";
 
 const DashboardRouting = () => {
   return (
-    <div className="flex w-full">
+    <div className="">
       <Routes>
         <Route path="/" element={<DashboardBase />} />
 

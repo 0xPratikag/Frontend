@@ -12,8 +12,8 @@ import {
   Star,
   ArrowRight,
 } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import logo from "../../src/assets/logo.jpeg";
+
 
 const services = [
   {
@@ -81,6 +81,24 @@ const SectionTitle = ({ eyebrow, title, subtitle }) => (
   </div>
 );
 
+const Card = ({ className = "", children }) => (
+  <div className={`bg-white ${className}`}>{children}</div>
+);
+
+const CardContent = ({ className = "", children }) => (
+  <div className={className}>{children}</div>
+);
+
+const Button = ({ className = "", variant = "default", children }) => {
+  const base = "inline-flex items-center justify-center rounded-2xl h-12 px-6 text-base font-medium transition-colors";
+  const styles =
+    variant === "outline"
+      ? "border border-orange-300 text-orange-700 hover:bg-orange-50 bg-white"
+      : "bg-blue-700 text-white hover:bg-blue-800";
+
+  return <button className={`${base} ${styles} ${className}`}>{children}</button>;
+};
+
 const DashboardBase = () => {
   return (
     <div className="min-h-screen bg-white text-slate-800">
@@ -88,7 +106,7 @@ const DashboardBase = () => {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img
-              src="/mnt/data/logo.jpeg"
+              src={logo}
               alt="India Therapy Centre logo"
               className="h-14 w-14 rounded-full object-cover border border-slate-200 shadow-sm"
             />
