@@ -29,9 +29,7 @@ const App = () => {
           <Route
             path="/*"
             element={
-              <RequireAuth>
                 <DashboardRouting />
-              </RequireAuth>
             }
           />
         </Routes>
