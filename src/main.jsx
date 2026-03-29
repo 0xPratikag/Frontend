@@ -1,8 +1,7 @@
-import React, { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client'; // Updated import for React 18
 import { BrowserRouter } from 'react-router-dom'; // Import BrowserRouter
 import App from './App';
-import './index.css'
+import './App/index.css'
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 

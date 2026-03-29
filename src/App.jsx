@@ -1,17 +1,12 @@
 import React, { Suspense } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import DashboardRouting from "./Components/DashboardRouting";
-import AuthForm from "./Components/Auth/AuthForm";
-import LoadingModal from "./LoadingModal";
-import BranchDashboardRouting from "./Components/BranchPanel/BranchDashboardRouting";
+import LoadingModal from "./modules/LoadingModal";
+import LandingRouting from "./modules/landing/routes/LandingRouting";
+import ClientRouting from "./modules/client/routes/ClientRouting";
 
-const RequireAuth = ({ children }) => {
-  const token = localStorage.getItem("token");
-  return token ? children : <Navigate to="/authentication" replace />;
-};
 
 const App = () => {
   return (
@@ -21,17 +16,11 @@ const App = () => {
         autoClose={3000}
         hideProgressBar={false}
       />
+
       <Suspense fallback={<LoadingModal />}>
         <Routes>
-          {/* ✅ Auth Page - Public */}
-
-          {/* ✅ Dashboard - Protected */}
-          <Route
-            path="/*"
-            element={
-                <DashboardRouting />
-            }
-          />
+          <Route path="/*" element={<LandingRouting />} />
+          <Route path="/client/*" element={<ClientRouting />} />
         </Routes>
       </Suspense>
     </>
