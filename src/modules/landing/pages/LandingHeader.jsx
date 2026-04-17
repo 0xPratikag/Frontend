@@ -118,15 +118,15 @@ const LandingHeader = () => {
               className="inline-flex items-center gap-2 rounded-2xl border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 hover:border-blue-300 hover:text-blue-700 hover:bg-blue-50 transition-all"
             >
               <LogIn size={18} />
-              Login
+             Client Login
             </Link>
 
             <Link
-              to="/client/signup"
+              to="/therapist/login"
               className="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 px-4 py-2.5 text-sm font-semibold text-white shadow-md hover:from-orange-600 hover:to-orange-700 transition-all"
             >
               <UserPlus size={18} />
-              Signup
+             Employee Login
             </Link>
           </div>
 
