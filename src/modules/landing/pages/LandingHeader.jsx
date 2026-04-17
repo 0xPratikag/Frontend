@@ -139,7 +139,7 @@ const LandingHeader = () => {
             </Link>
 
             <Link
-              to="/client/signup"
+             to="/therapist/login"
               className="inline-flex items-center justify-center h-10 w-10 rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-sm hover:from-orange-600 hover:to-orange-700 transition-all"
             >
               <UserPlus size={18} />
