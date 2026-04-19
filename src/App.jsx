@@ -6,9 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import LoadingModal from "./modules/LoadingModal";
 import LandingRouting from "./modules/landing/routes/LandingRouting";
 import ClientRouting from "./modules/client/routes/ClientRouting";
-import EmployeeRouting from "./modules/employee/routes/TherapistRouting";
 import TherapistRouting from "./modules/employee/routes/TherapistRouting";
-
 
 const App = () => {
   return (
@@ -23,8 +21,7 @@ const App = () => {
         <Routes>
           <Route path="/*" element={<LandingRouting />} />
           <Route path="/client/*" element={<ClientRouting />} />
-            <Route path="/therapist/*" element={<TherapistRouting />} />
-
+          <Route path="/therapist/*" element={<TherapistRouting />} />
         </Routes>
       </Suspense>
     </>
